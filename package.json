@@ -1,0 +1,37 @@
+{
+  "name": "bd_fashion_back-end",
+  "version": "1.0.0",
+  "description": "mern stack e-commerce site",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "SET NODE_ENV=DEVELOPMENT& nodemon server.js",
+    "prod": "SET NODE_ENV=PRODUCTION& nodemon server.js",
+    "sender": "node utilies/datasender.js"
+  },
+  "keywords": [
+    "mern",
+    "stack",
+    "react"
+  ],
+  "author": "abdur rahman",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cloudinary": "^1.27.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express.js": "^1.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.12",
+    "multer": "^1.4.3",
+    "nodemailer": "^6.7.0",
+    "react-table": "^7.7.0",
+    "validator": "^13.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}

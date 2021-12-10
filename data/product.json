@@ -1,0 +1,89 @@
+[
+    {
+        "name":"Product no1 Electronics",
+        "price":"10",
+        "description":"lorem aksjfskf klfjskfsjslkfjskf sdfklsjfjaslkfdsjflks sdfksjf sdfsdklfj sdfjsdkl asklfjsdl asfjsklf",
+        "stock":"5",
+        "rating":"5",
+        "image":[],
+        "category":"Electronics",
+        "seller":"abdur rahman",
+        "numOfReviews":"1",
+        "reviews":[]
+    },
+    {
+        "name":"Product no2 Cameras",
+        "price":"20",
+        "description":"lorem aksjfskf klfjskfsjslkfjskf sdfklsjfjaslkfdsjflks sdfksjf sdfsdklfj sdfjsdkl asklfjsdl asfjsklf",
+        "stock":"2",
+        "rating":"10",
+        "image":[],
+        "category":"Cameras",
+        "seller":"abdur rahman",
+        "numOfReviews":"2",
+        "reviews":[]
+    },
+    {
+        "name":"Product no3 Laptop",
+        "price":"30",
+        "description":"lorem aksjfskf klfjskfsjslkfjskf sdfklsjfjaslkfdsjflks sdfksjf sdfsdklfj sdfjsdkl asklfjsdl asfjsklf",
+        "stock":"3",
+        "rating":"30",
+        "image":[],
+        "category":"Laptop",
+        "seller":"abdur rahman",
+        "numOfReviews":"2",
+        "reviews":[]
+    },
+    {
+        "name":"Product no4 Accessories",
+        "price":"30",
+        "description":"lorem aksjfskf klfjskfsjslkfjskf sdfklsjfjaslkfdsjflks sdfksjf sdfsdklfj sdfjsdkl asklfjsdl asfjsklf",
+        "stock":"4",
+        "rating":"40",
+        "image":[],
+        "category":"Accessories",
+        "seller":"abdur rahman",
+        "numOfReviews":"2",
+        "reviews":[]
+    },
+    {
+        "name":"Product no5 Headphones",
+        "price":"30",
+        "description":"lorem aksjfskf klfjskfsjslkfjskf sdfklsjfjaslkfdsjflks sdfksjf sdfsdklfj sdfjsdkl asklfjsdl asfjsklf",
+        "stock":"4",
+        "rating":"40",
+        "image":[],
+        "category":"Headphones",
+        "seller":"abdur rahman",
+        "numOfReviews":"2",
+        "reviews":[]
+    },
+ 
+    {
+        "orderItems": [
+            {
+                "name": "product name",
+                "quantity":1,
+                "price":25,
+                "image":"https://images.pexels.com/photos/7500150/pexels-photo-7500150.jpeg?cs=srgb&dl=pexels-meruyert-gonullu-7500150.jpg&fm=jpg",
+                "productId":"6172d59326432c58b84c9136"
+            }
+        ],
+        "shippingInfo": {
+            "address":"katgar",
+            "city":"ctg",
+            "PhoneNumber":"01866274505",
+            "postalCode":"4201",
+            "country":"bd"
+        },
+        "itemsPrice": "5.25",
+        "TexPrice": "2.00",
+        " shippingPrice": "15.00",
+        "totalPrice": "400",
+        "paymentInfo": {
+            "id":"payment card id",
+            "status":"successed"
+        }
+    }
+]
