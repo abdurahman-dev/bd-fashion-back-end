@@ -10,9 +10,10 @@ exports.registerUser = catchAsyncError(async (req, res, next) => {
     name,
     email,
     password,
+    userShippingInfo:{},
     avatar: {
-      public_id: 'samples/people/smiling-man',
-      url: 'https://res.cloudinary.com/dpqv2divs/image/upload/v1635170992/samples/people/smiling-man.jpg',
+      public_id: 'avaters/download_1_stnqje',
+      url: 'https://res.cloudinary.com/dpqv2divs/image/upload/v1639745838/avaters/download_1_stnqje.jpg',
     },
   });
   sendToken(user, 201, res);
@@ -146,10 +147,11 @@ exports.updateUserById = catchAsyncError(async (req, res, next) => {
   if (req.body.role) {
     user.role = req.body.role;
   }
-  user.save();
+ await user.save();
+  const users = await Users.find({});
   res.status(200).json({
     success: true,
-    user,
+    users,
   });
 });
 

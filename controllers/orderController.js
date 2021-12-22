@@ -75,16 +75,15 @@ exports.allOrders = catchAsyncError(async (req, res, next) => {
 // update orders delivary statud by admin => api/v1/admin/orders/update/id
 exports.updateOrders = catchAsyncError(async (req, res, next) => {
   const { status } = req.body;
-
   const order = await Orders.findById(req.params.id);
 
   if (order.orderStatus === 'Delivered') {
     return next(new ErrorHandler('This order already delivered', 400));
   }
-
   order.orderItems.forEach(async (item) => {
-    const product = await Product.findById(item.productId);
-    product.stock = product.stock - item.quantity;
+    
+    const product = await Product.findById(item.ProductId);
+    product.productStock = product.productStock- item.qnt;
     // if(product.stock <0){
     //       return next(new ErrorHandler(`this is no ${item.quantity} product`,400))
     // }
