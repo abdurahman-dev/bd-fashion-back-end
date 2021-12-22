@@ -19,6 +19,7 @@ res.status(201).json({
 
 exports.getCategory=catchAsyncError(async(req,res,next)=>{
   const cat= await Category.find({})
+  console.log(cat);
   res.status(200).json({
     success:true,
     categories:cat
