@@ -15,8 +15,9 @@ exports.newProduct = catchAsyncError(async (req, res, next) => {
   }
   req.body.productImage = pdImg;
 
-  await Product.create(req.body);
+  const pd = await Product.create(req.body);
   const pds = await Product.find({});
+
   res.status(201).json({
     success: true,
     product: pds,
@@ -68,7 +69,7 @@ exports.singleProduct = catchAsyncError(async (req, res, next) => {
 exports.updateProduct = catchAsyncError(async (req, res, next) => {
   try {
     const PdId = req.params.id;
-    let product =await Product.findById(PdId);
+    let product = await Product.findById(PdId);
     if (!product) {
       return next(new ErrorHandler('Product not found', 404));
     }
@@ -77,7 +78,7 @@ exports.updateProduct = catchAsyncError(async (req, res, next) => {
       runValidators: true,
       useFindAndModify: true,
     });
-    const products= await Product.find({})
+    const products = await Product.find({});
     res.status(200).json({
       success: true,
       products,

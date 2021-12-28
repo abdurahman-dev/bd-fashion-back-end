@@ -40,7 +40,6 @@ const productSchema = new mongoose.Schema(
     productSubCategory: {
       type: String,
       required: [true, 'Please select the SubCategory for the products'],
-      default:'All'
     },
     productSellerName: {
       type: String,
