@@ -6,12 +6,14 @@ const { isAuthenticatedUser, authorizeRoles } = require('../middlewares/auth');
 var cors = require('cors');
 
 const router = express.Router();
-
-router.route('/initialData').get(
-  cors({
+const corsOptions={
     credentials: true,
     origin: 'http://localhost:3000',
-  }),
+    optionsSuccessStatus: 200
+  }
+
+router.route('/initialData').get(
+  cors(corsOptions),
   isAuthenticatedUser,
   authorizeRoles('admin'),
   initialDataAdmin
