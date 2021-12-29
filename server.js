@@ -2,7 +2,7 @@ const app = require('./app');
 const connectDatabase = require('./config/database');
 const dotenv = require('dotenv');
 
-dotenv.config({ path: 'config/config.env' });
+dotenv.config();
 
 //handle uncaught error
 process.on('uncaughtException', (err) => {
@@ -18,9 +18,9 @@ app.get('/', (req, res) => {
   res.send('Hello bro!');
 });
 
-const server = app.listen(process.env.PORT, () => {
+const server = app.listen(4000, () => {
   console.log(
-    `Example app listening at http://localhost:${process.env.PORT}, ${process.env.NODE_ENV} mode.`
+    `Example app listening at http://localhost:${4000}, ${process.env.NODE_ENV} mode.`
   );
 });
 
@@ -32,3 +32,5 @@ process.on('unhandledRejection', (err) => {
     process.exit(1);
   });
 });
+
+//{ path: 'config/config.env' }
