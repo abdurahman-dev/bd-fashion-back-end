@@ -12,8 +12,16 @@ const {
   deleteReview,
 } = require('../controllers/productsController');
 const { isAuthenticatedUser, authorizeRoles } = require('../middlewares/auth');
+const cors = require('cors');
 
+const corsOptions = {
+  origin: 'https://db-fashion.vercel.app',
+  optionsSuccessStatus: 200,
+};
+//cors(corsOptions), 
 //read all products
+/**cors({ credentials: true,origin: "https://db-fashion.vercel.app"
+}) */
 router.route('/allProducts').get(products);
 //read all products
 router.route('/products').get(allProducts);
