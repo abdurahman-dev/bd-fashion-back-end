@@ -5,6 +5,7 @@ const User =require('../models/userModel')
 
 exports.isAuthenticatedUser= catchAsyncError(async(req,res,next)=>{
     const {authorization}= req.headers;
+    console.log(req.headers);
     const token=authorization
     if(!token){
         return next (new ErrorHandler('need to login first'))

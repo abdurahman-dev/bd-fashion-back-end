@@ -14,10 +14,6 @@ const {
 const { isAuthenticatedUser, authorizeRoles } = require('../middlewares/auth');
 const cors = require('cors');
 
-const corsOptions = {
-  origin: 'https://db-fashion.vercel.app',
-  optionsSuccessStatus: 200,
-};
 //cors(corsOptions), 
 //read all products
 /**cors({ credentials: true,origin: "https://db-fashion.vercel.app"
